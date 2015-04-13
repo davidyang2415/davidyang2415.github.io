@@ -1,6 +1,6 @@
-# Jekyll
-permalink: /:year/:title/
-paginate: 10
-exclude: []
-name: Jekyll Bootstrap
-baseurl: /jekyll-bootstrap
+markdown: rdiscount
+permalink: /:year/:month/:title/
+url: http://geeklu.com
+author: 卢克
+pygments: true
+paginate: 24
