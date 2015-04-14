@@ -1,14 +1,11 @@
 ---
-layout: post
-title: Java Network
+layout:post
+title: Java专题之网络
 categories:
 - Programming Language
 tags:
 - Java
 ---
-
-# Java专题之网络
---------------------------------------
 
 ## BIO,基础IO通信模型
 - Socket和ServerSocket实现
