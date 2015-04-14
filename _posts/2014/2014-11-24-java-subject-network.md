@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: Java专题之网络
 categories:
 - Programming Language
