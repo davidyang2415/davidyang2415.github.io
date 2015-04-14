@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Collections
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # python语法之内置容器
 ------------
 Python中内建容器数据结构包括：序列、映射(如字典)及其他(如集合)。

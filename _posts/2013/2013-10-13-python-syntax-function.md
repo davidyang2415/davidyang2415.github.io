@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Function
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python语法之函数
 ---
 ## 函数

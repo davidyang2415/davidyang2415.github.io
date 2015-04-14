@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Source Code
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python语法之源代码组织
 ------------------
 ## 源代码文件

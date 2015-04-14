@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Network
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python专题之网络
 ---
 ## socket模块

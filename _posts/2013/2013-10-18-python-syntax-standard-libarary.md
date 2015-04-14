@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Standard Libarary
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python语法之标准库
 ---
 ## 内置函数：

@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Object-Oriented
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python语法之面向对象
 ---
 # 类：

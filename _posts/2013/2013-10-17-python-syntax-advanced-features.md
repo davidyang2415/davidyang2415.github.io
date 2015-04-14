@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Advanced Features
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python语法之扩展特性
 ---
 - Python高级特性包括：

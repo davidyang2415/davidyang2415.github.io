@@ -1,3 +1,13 @@
+---
+layout:post
+title:Difference Between Java And C++
+categries:
+- Programming Language
+tags:
+- Java
+---
+
+
 # Java与C++的比较
 ---
 - java不允许将一个数字作为布尔值使用

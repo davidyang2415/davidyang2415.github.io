@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Basic Language
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python语法之语言基础
 ------------------
 ## 核心概念：一切都是对象

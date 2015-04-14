@@ -1,3 +1,12 @@
+---
+layout:post
+title:Python Exception
+categries:
+- Programming Language
+tags:
+- Python
+---
+
 # Python语法之基础语法
 ---
 ## 类型系统

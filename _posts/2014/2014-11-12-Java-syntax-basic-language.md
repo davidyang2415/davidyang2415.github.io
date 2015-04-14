@@ -1,3 +1,12 @@
+---
+layout:post
+title:Java Basic Language
+categries:
+- Programming Language
+tags:
+- Java
+---
+
 # Java语法之语言基础
 --------------------------------------
 ## 语言特性

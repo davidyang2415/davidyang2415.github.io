@@ -1,3 +1,12 @@
+---
+layout:post
+title:Java Advanced Features
+categries:
+- Programming Language
+tags:
+- Java
+---
+
 # Java语法之高级特性
 --------------------------------------
 

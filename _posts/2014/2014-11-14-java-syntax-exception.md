@@ -1,3 +1,12 @@
+---
+layout:post
+title:Java Exception
+categries:
+- Programming Language
+tags:
+- Java
+---
+
 # Java语法之异常处理
 --------------------------------------
 ## 错误处理概念

@@ -1,3 +1,12 @@
+---
+layout:post
+title:Java Basic Syntax
+categries:
+- Programming Language
+tags:
+- Java
+---
+
 # Java语法之基础语法
 --------------------------------------
 ## 类型系统

@@ -1,3 +1,12 @@
+---
+layout:post
+title:C Standard Libarary
+categries:
+- Programming Language
+tags:
+- C&C++
+---
+
 # C语言标准库
 --------------------------------------
 

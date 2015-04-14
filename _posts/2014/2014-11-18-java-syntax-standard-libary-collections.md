@@ -1,3 +1,12 @@
+---
+layout:post
+title:Java Collections
+categries:
+- Programming Language
+tags:
+- Java
+---
+
 # Java语法之标准库之容器篇
 --------------------------------------
 ## 常遇到问题
