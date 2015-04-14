@@ -1,14 +1,11 @@
 ---
-layout:post
-title:Java Thread And Concurrent
-categries:
+layout: post
+title: Java专题之并发
+categories:
 - Programming Language
 tags:
 - Java
 ---
-
-# Java专题之并发
---------------------------------------
 
 ## 并发模型
 - 线程定义

@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Java Object-Oriented
-categries:
+layout: post
+title: Java语法之面向对象
+categories:
 - Programming Language
 tags:
 - Java
 ---
 
-# Java语法之面向对象
---------------------------------------
 > 面向对象的三个基本属性：封装、继承和多态。
 
 ## 类

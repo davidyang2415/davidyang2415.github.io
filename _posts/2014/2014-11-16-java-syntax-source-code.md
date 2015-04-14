@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Java Source Code
-categries:
+layout: post
+title: Java语法之源代码组织
+categories:
 - Programming Language
 tags:
 - Java
 ---
 
-# Java语法之源代码组织
---------------------------------------
 ## 源文件
 - 每个java源文件中最多只能有一个public类，也可以没有(不推荐)
 - 如果java源文件中包含一个public类，则文件名必须与public类名相同

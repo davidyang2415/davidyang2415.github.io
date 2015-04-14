@@ -1,14 +1,11 @@
 ---
-layout:post
-title:Java Advanced Features
-categries:
+layout: post
+title: Java语法之高级特性
+categories:
 - Programming Language
 tags:
 - Java
 ---
-
-# Java语法之高级特性
---------------------------------------
 
 ## 类型信息
 - RTTI(RunTime Type Information):

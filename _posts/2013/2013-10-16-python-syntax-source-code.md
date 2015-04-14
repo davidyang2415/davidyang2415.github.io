@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Source Code
-categries:
+layout: post
+title: Python语法之源代码组织
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python语法之源代码组织
-------------------
 ## 源代码文件
 - 源码文件后缀：
 	- .py，源文件

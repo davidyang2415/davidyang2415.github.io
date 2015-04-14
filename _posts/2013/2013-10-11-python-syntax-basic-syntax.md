@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Basic Syntax
-categries:
+layout: post
+title: Python语法之基础语法
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python语法之基础语法
----
 ## 类型系统
 - 标识符
 	- Python是大小写敏感的语言

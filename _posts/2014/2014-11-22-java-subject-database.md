@@ -1,13 +1,8 @@
 ---
-layout:post
-title:Java Database
-categries:
+layout: post
+title: Java专题之数据库
+categories:
 - Programming Language
 tags:
 - Java
 ---
-
-# Java专题之数据库
---------------------------------------
-
-## JDBC数据库访问

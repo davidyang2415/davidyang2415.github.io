@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Database
-categries:
+layout: post
+title: Python专题之数据库
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-#Python专题之数据库
----
 > Python虽然没有标准的数据库模块，但定义了所有第三方模块必须遵守的数据库API
 
 ##数据库API

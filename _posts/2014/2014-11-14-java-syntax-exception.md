@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Java Exception
-categries:
+layout: post
+title: Java语法之异常处理
+categories:
 - Programming Language
 tags:
 - Java
 ---
 
-# Java语法之异常处理
---------------------------------------
 ## 错误处理概念
 - 异常与错误
 

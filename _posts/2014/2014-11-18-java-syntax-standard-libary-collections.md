@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Java Collections
-categries:
+layout: post
+title: Java语法之标准库之容器篇
+categories:
 - Programming Language
 tags:
 - Java
 ---
 
-# Java语法之标准库之容器篇
---------------------------------------
 ## 常遇到问题
 - 遍历容器时，插入和删除元素
 

@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Java Basic Syntax
-categries:
+layout: post
+title: Java语法之基础语法
+categories:
 - Programming Language
 tags:
 - Java
 ---
 
-# Java语法之基础语法
---------------------------------------
 ## 类型系统
 ### 存储管理
 - 存储位置

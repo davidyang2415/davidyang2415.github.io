@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Function
-categries:
+layout: post
+title: Python语法之函数
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python语法之函数
----
 ## 函数
 - 函数定义与调用
 	- 函数定义：def fctname([paramname[=defaultvalue][,...]][,*args][,**kwargs]): instructions

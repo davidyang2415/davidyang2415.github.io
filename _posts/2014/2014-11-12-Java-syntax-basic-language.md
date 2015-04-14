@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Java Basic Language
-categries:
+layout: post
+title: Java语法之语言基础
+categories:
 - Programming Language
 tags:
 - Java
 ---
 
-# Java语法之语言基础
---------------------------------------
 ## 语言特性
 - 语言类型
 	- 强类型语言：必须先声明类型再使用

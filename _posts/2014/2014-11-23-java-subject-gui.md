@@ -1,11 +1,8 @@
 ---
-layout:post
-title:Java GUI
-categries:
+layout: post
+title: Java专题之图形
+categories:
 - Programming Language
 tags:
 - Java
 ---
-
-# Java专题之图形
---------------------------------------

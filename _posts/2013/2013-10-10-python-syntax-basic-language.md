@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Basic Language
-categries:
+layout: post
+title: Python语法之语言基础
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python语法之语言基础
-------------------
 ## 核心概念：一切都是对象
 - 这里说的一切包括：函数、类、类实例、模块、复数和文件。
 - 对象具有特性：

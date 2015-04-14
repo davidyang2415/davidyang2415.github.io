@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Advanced Features
-categries:
+layout: post
+title: Python语法之扩展特性
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python语法之扩展特性
----
 - Python高级特性包括：
 	- 元类
 	- 装饰器与闭包

@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Standard Libarary
-categries:
+layout: post
+title: Python语法之标准库
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python语法之标准库
----
 ## 内置函数：
 - 输入与输出：
 	- input(),原语输入-字符串输入时需要加引号，输入值类型与输入相关

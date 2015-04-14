@@ -1,14 +1,11 @@
 ---
-layout:post
-title:C Standard Libarary
-categries:
+layout: post
+title: C语言标准库
+categories:
 - Programming Language
 tags:
 - C&C++
 ---
-
-# C语言标准库
---------------------------------------
 
 ## I/O系统
 - 头文件：#include <stdio.h>

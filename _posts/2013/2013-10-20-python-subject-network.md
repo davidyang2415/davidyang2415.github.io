@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Network
-categries:
+layout: post
+title: Python专题之网络
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python专题之网络
----
 ## socket模块
 - socket对象
 	- socket.socket()返回socket对象

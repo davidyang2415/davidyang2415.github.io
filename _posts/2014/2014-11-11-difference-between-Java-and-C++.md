@@ -1,15 +1,12 @@
 ---
-layout:post
-title:Difference Between Java And C++
-categries:
+layout: post
+title: Java与C++的比较
+categories:
 - Programming Language
 tags:
 - Java
 ---
 
-
-# Java与C++的比较
----
 - java不允许将一个数字作为布尔值使用
 - java没有无符号整型类型
 - java不支持goto语法，但提供了替代的标签语法

@@ -1,14 +1,12 @@
 ---
-layout:post
-title:Python Object-Oriented
-categries:
+layout: post
+title: Python语法之面向对象
+categories:
 - Programming Language
 tags:
 - Python
 ---
 
-# Python语法之面向对象
----
 # 类：
 - 新类与旧类
 - 类定义：
