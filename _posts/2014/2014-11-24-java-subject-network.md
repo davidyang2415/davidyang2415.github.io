@@ -1,6 +1,6 @@
 ---
-layout:post
-title:Java Network
+layout: post
+title: Java Network
 categries:
 - Programming Language
 tags:
