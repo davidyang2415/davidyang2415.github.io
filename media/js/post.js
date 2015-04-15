@@ -189,20 +189,20 @@ $(document).ready(function(){
         }
     })();
 
-    window.disqus_shortname = 'shanejiang';
+    window.disqus_shortname = 'name';
     $('#disqus_container .comment').on('click', function() {
         $(this).html('loading...')
         var that = this;
         $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
     });
 
-    $.getScript('/js/prettify/prettify.js',function(){
+    $.getScript('/media/js/prettify/prettify.js',function(){
         prettyPrint();
     });
 
     
     if(/css3-animation/.test(location.href)){
-        $("head").append("<link rel='stylesheet' type='text/css' href='/css/css3-ani.css'/>");
-        $.getScript('/js/css3-ani.js',function(){});
+        $("head").append("<link rel='stylesheet' type='text/css' href='/media/css/css3-ani.css'/>");
+        $.getScript('/media/js/css3-ani.js',function(){});
     }
 });
