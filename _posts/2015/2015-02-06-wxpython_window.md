@@ -1,0 +1,207 @@
+---
+layout: post
+title: wxpython window
+categories:
+- Programming Language
+tags:
+- Python&Lib
+---
+
+# wxPython之窗口
+------------
+## 顶级窗口
+- 窗口框架
+	- 框架wx.Frame
+		- wx.Frame(parent,id=-1,title="",pos=wx.DefaultPosition,size=wx.DefaultSize,
+			- style=wx.DEFAULT_FRAME_STYLE,name='frame')
+		- 样式
+			- 形状和尺寸：wx.FRAME_NO_TASKBAR,wx.FRAME_SHAPED,wx.FRAME_TOOL_WINDOW
+				- wx.MAXIMIZE,wx.MINIMIZE,wx.ICONIZE(仅适用于windows)
+			- 漂浮行为：wx.FRAME_FLOAT_ON_PARENT,wx.STAY_ON_TOP
+			- 装饰:
+				- wx.CAPTION 标题栏
+				- wx.FRAME_EX_CONTEXTHELP (windows)
+				- wx.FRAME_EX_METAL (mac)
+				- wx.MAXIMIZE_BOX,wx.MINIMIZE_BOX,wx.CLOSE_BOX
+				- wx.RESIZE_BORDER,wx.SIMPLE_BORDER
+				- wx.SYSTEM_MENU
+			- wx.DEFAULT_FRAME_STYLE:wx.MINIMIZE_BOX|wx.MAXIMIZE_BOX|wx.CLOSE_BOX|
+				- wx.RESIZE_BORDER|wx.SYSTEM_MENU|wx.CAPTION
+			- 带有EX的样式是扩展样式，有特定的使用方法
+		- 事件：主要是关闭事件
+		- 方法
+			- 公共属性
+				- GetBackgroundColor(),SetBackgroundColor(wx.Color)
+				- GetId(),SetId(int)
+				- GetMenuBar(),SetMenuBar(wx.MenuBar)
+				- GetPosition(),GetPositionTuple(),SetPosition(wx.Point)
+				- GetSize(),GetSizeTuple(),SetSize(wx.Size)
+				- GetTitle(),SetTitle(String)
+			- 非属性方法
+				- Center(idrection=wx.BOTH)
+				- Enable(enable=True),Disable()
+				- GetBestSize()，能容纳所有子窗口的最小尺寸
+				- Iconize(bool)
+				- IsEnabled(),IsFullScreen(),isIconized(),IsMaximized(),IsShown(),IsTopLevel()
+				- Refresh()
+				- Show(show=True)
+				- ShowFullScreen(show,style=wx.FULLSCREEN_ALL)
+				- SetDimensitions(x,y,width,height,sizeFlags=wx.SIZE_AUTO)
+		－ 查找子窗口
+			- wx.FindWindowById(id,parent=None)
+			- wx.FindWindowByName(name,parent=None)
+			- wx.FindWindowByLabel(label,parent=None)
+	- 活动条wx.ScrolledWindow
+		- 性质同wx.Panel
+		- wx.ScrolledWindow(parent,id=-1,pos=wx.DefaultPoint,size=wx.DefaultSize,
+			- style=wx.HSCROLL|wx.VSCROLL,name='scrolledWindow')
+		- 事件：EVT_SCROLL,EVT_SCROLL_BOTTOM,EVT_SCROLL_TOP
+			- EVT_SCROLL_ENDSCROLL()
+			- EVT_SCROLL_LINEDOWN,EVT_SCROLL_LINEUP
+			- EVT_SCROLL_PAGEDOWN,EVT_SCROLL_PAGEUP
+			- EVT_SCROLL_THUMBLEASE,EVT_SCROLL_THUMBTRACK
+		- 方法
+			- SetScrollbars(pixelsPerUnitX,pixelsPerUnitY,noUnitsX,noUnitsY,xPos=0,yPos=0,noRefresh=False)
+			- SetVirtualSize(wx.Size)
+			- FitInside()
+			- SetScrollRate(w,y)
+			- Scroll(x,y)
+	- MDI框架
+		- wx.MDIParentFrame(parent,id,title,pos=wx.DefaultPosition,size=wx.DefaultSize,
+			- sytle=wx.DEFAULT_FRAME_STYLE|wx.VSCROLL|wx.HSCROLL,name='frame')
+	- 小框架wx.MiniFrame
+	- 非矩形框架
+	- 分割窗
+		- wx.SplitterWindow(parent,id=-1,pos=wx.DefaultPosition,size=wx.DefaultSize,
+			- style=wx.SP_3D,name='splitterWindow')
+		- 样式：wx.SP_3D,wx.SP_3DBORDER,wx.SP_3DSASH,wx.SP_BORDER
+			- wx.SP_LIVE_UPDATE(分割线动态变化时可直接看到结果),wx.SP_NOBORDER,wx.SP_PERMIT_UNSPLIT
+		- 事件：EVT_SPLITTER_DCLICK,EVT_SPLITTER_SASH_POS_CHANGED,EVT_SPLITTER_SASH_POS_CHANGING,EVT_SPLITTER_UNSPLIT
+		- 方法:
+			- Hide()
+			- Unsplit(toRemove=None)
+			- GetWindow1(),GetWindow2()
+			- ReplaceWindow(winOld,winNew)
+			- SetSashPosition(position,redraw=True)
+			- SetMinimumPaneSize(paneSize)
+
+## 对话框
+- 模式对话框
+	- 基类：wx.Dialog
+	- 使用方法：
+		- 创建对话框：
+			- 使用类：创建对话框dialog，显示并获取结果result=dialog.ShowModal()
+			- 直接使用函数，如result=wx.MessageBox(...)
+		- 对返回值result进行处理
+		- 最后一定要销毁对象，调用dialog.Destroy()
+- 预定义对话框
+	- wx.MessageDialog，消息对话框
+		- wx.MessageDialog(parent,message,caption='Message box',style=wx.OK|wx.CANCEL,pos=wx.DefaultPosition)
+		- 便利函数：wx.MessageBox(message,caption="Message",style=wx.OK)
+		- 样式 
+			- 按钮样式：wx.YES_NO wx.YES_DEFAULT wx.NO_DEFAULT，wx.OK wx.CANCEL
+			- 消息文本样式：wx.ICON_ERROR，wx.ICON_EXCLAMATION，wx.ICON_HAND，wx.ICON_INFORMATION，wx.ICON_QUESTION
+			- wx.STAY_ON_TOP，置顶
+		- 扩展：如显示许可证使用wx.lib.dialog.ScrolledMessageDialog
+	- wx.TextEntryDialog，文本输入对话框
+		－ wx.TextEntryDialog(parent,message,cption='Please enter text',defaultValue="",
+			- style=wx.OK|wx.CANCEL|wx.CENTER,pos=wx.DefaultPosition)
+		- 样式：部分服用wx.TextCtrl的样式
+			- wx.TEL_LEFT wx.TEL_CENTRE wx.TEL_RIGHT,wx.TEL_PASSWORD wx.TEL_MULTILINE
+		- 方法：GetValue()，SetValue() 设置对话框中的值
+		- 便利函数：
+			- wx.GetTextFromUser(message,caption='Input text',dafualt_value="",parent=None)
+			- wx.GetPasswordFromUser(message,caption='input text',default_value="",parent=None)
+			- wx.GetNumberFromUser(message,prompt,caption,value,min=0,max=100,parent=None)
+	- wx.SingleChoiceDialog，选项列表
+		- wx.SingleChoiceDialog(parent,message,caption,choices,clientData=None,
+			- style=wx.OK|wx.CANCEL|wx.CENTRE,pos=wx.DefaultPostion)
+		- 方法：SetSelection(index)，GetSelection() GetStringSelection()
+		- 便利函数：
+			- wx.GetSingleChoice(message,caption,aChoices,parent=None)
+			- wx.GetSingleChoiceIndex(message,caption,aChoices,parent=None)
+	- wx.ProgressDialog，进度条
+		- wx.ProgressDialog(title,message,maximum=100,parent=None,style=wx.PD_AUTO_HIDE|wx.PD_APP_MODAL)
+		- 样式：
+			- wx.PD_APP_MODAL 设置则阻塞应用程序的所有事件，否则对父窗口模式
+			- wx.PD_AUTO_HIDE 进度条显示完成后自动隐藏
+			- wx.PD_CAN_ABORT 显示Cancel按钮，通过Update方法返回值来起作用
+			- wx.PD_ELAPSED_TIME 显示进度条出现的时间
+			- wx.PD_ESTIMATED_TIME 显示需要的总时间
+			- wx.PD_REMAINING_TIME 显示剩余时间
+		- 方法：Update(value,newmsg="")
+- 标准对话框
+	- 文件选择对话框
+	- 目录选择对话框
+		- wx.DirDialog(parent,message='Choose a directory',defaultPath='',style=0,pos=wx.DefaultPosition,
+			- size=wx.DefaultSize,name='wxDirCtrl')
+			- 样式：wx.DD_NEW_DIR_BUTTON 显示一个创建新目录的按钮
+			- 方法：path,message,style 都又对应的get／set方法
+			- 便利函数：wx.DirSelector(message=wx.DirSelectorPromptStr,default_path='',
+				- style=0,pos=wx.DefaultPosition,parent=None)
+	- 字体选择对话框：wx.FontDialog
+	- 颜色选择对话框：wx.ColourDialog
+	- 图片选择对话框：wx.lib.imagebrower.ImageDialog
+- 向导
+	- wx.wizard.Wizard(parent,id=-1,title=wx.EmptyString,bitmap=wx.NullBitmap,pos=wx.DefaultPosition)
+	- 事件：EVT_WIZARD_CANCEL(按下Cancel按钮时产生，可通过Veto()来否决),EVT_WIZARD_FINISHED,EVT_WIZARD_HELP
+		- EVT_WIZARD_PAGE_CHANGED 页面被切换后产生
+		- EVT_WIZARD_PAGE_CHANGING 用户请求切换页面，可否决－－比如某些必填项还没填写
+	- 事件方法：
+		- GetPage() 返回wx.wizard.WizardPage
+		- GetDirection() 前进到下一页则返回True，否则返回False
+	- 方法：
+		- FitToSize(firstPage)
+		- GetPageSize() SetPageSize(size)
+		- GetCurrentPage() HasNextPage() HasPrevPage()
+		- RunWizard(firstPage) 运行向导，使用Finish按钮结束返回True
+- 向导页
+	- 只是附加了必要的管理页面逻辑的wx.Panel
+	- 两个向导页wx.wizard.WizardPageSimple和wx.wizard.WizardPage的区别在按下Next按钮时后者动态决定而前者按预先设定顺序浏览
+	- wx.wizard.WizardPageSimple
+		- wx.wizard.WizardPageSimple(parent=None,prev=None,next=None)
+		- SetPrev() SetNext()
+		- wx.wizard.WizardPageSimple_Chain(pagePrev,pageNext)
+	- wx.wizard.WizardPage
+		- wx.wizard.WizardPage(parent,bitmap=wx.NullBitmap,resource=None)
+		- 子类需要覆写GetPrev()和GetNext()方法
+- 启动提示
+	- wx.CreateFileTipProvider(filename,currentTip) currentTip一般设置为0表示文件中第一个提示字符串的索引
+	- wx.ShowTip(parent,tipProvider,showAtStartup)
+
+## 菜单
+- 常规菜单
+	- wx.MenuBar(),方法：
+		- Append(menu,title),Insert(pos,menu,title),Remove(pos),Replace(pos,menu,title)
+		- EnableTop(pos,enable),GetMenu(pos),GetMenuCount(),FindMenu(title),GetLabelTop(pos)/SetLabelTop(pos,label)
+	- wx.Menu(title="",style=0),方法：
+		- Append(id,string,helpStr="",kind=wx.ITEM_NORMAL),AppendSeparator()
+		- Prepend(id,string,helpStr="",kind=wx.ITEM_NORMAL),PrependSeparator()
+		- Insert(pos.id,string,helpStr="",kind=wx.ITEM_NORMAL),InsertSeparator(pos)
+		- AppendItem(aMenuItem),Insertitem(pos,aMenuItem),PrependItem(aMenuItem),RemoveItem(item)
+		- GetMenuItemCount() GetMenuItems()
+	- wx.MenuItem(parentMenu=None,id=ID_ANY,text="",helpString="",kind=wx.ITEM_NORMAL,subMenu=None)
+	- 菜单事件：EVT_MENU
+		- self.Bind(wx.EVT_MENU,self.OnExit,exit_menu_item)
+		- self.Bind(wx.EVT_MENU_RANGE,function,id=menu1,id2=menu2)
+		- EVT_MENU_CLOSE EVT_MENU_OPEN
+		- EVT_MENU_HIGHLIGHT EVT_MENU_HIGHLIGHT_ALL
+	- 有效控制
+		- IsEnabled() IsEnabled(id)
+		- Enable(enable) Enable(id,enable)
+	- 菜单快捷键
+		- 助记符 title中使用&
+		- 加速器 title中使用\tctrl-n形式
+	- 复选或单选菜单项
+		- menu.AppendCheckItem(id,item,helpString="")
+		- menu.AppendRadioItem(id,item,helpStr="")
+		- 对应的都有Prepend和Insert版本
+		- IsCheckable(),IsChecked(),Check(check) chack(id,check)
+	- 添加子菜单：menu.AppendMenu(id,text,submenu,helpStr),及Prepend和Insert版本
+- 右键菜单
+	- 创建菜单对象
+	- 绑定事件：Bind(wx.EVT_CONTEXT_MENU,self.OnShowPopup)
+	- 事件处理
+		- 1.pos=event.GetPosition()
+		- 2.pos=self.panel.ScreenToClient(pos)
+		- 3.self.panel.Popupmenu(self.popumenu,pos)
