@@ -2,7 +2,7 @@
 layout: post
 title: google-glog
 categories:
-- Libaray
+- Libarary
 tags:
 - C++
 - google

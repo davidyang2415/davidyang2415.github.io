@@ -2,7 +2,7 @@
 layout: post
 title: linux命令
 categories:
-- Linux
+- Tool Trick
 tags:
 - linux
 ---

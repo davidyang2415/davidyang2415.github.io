@@ -2,7 +2,7 @@
 layout: post
 title: linux shell
 categories:
-- Linux
+- Tool Trick
 tags:
 - linux
 ---

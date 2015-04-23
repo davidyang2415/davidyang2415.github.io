@@ -2,7 +2,7 @@
 layout: post
 title: 程序员修炼之道
 categories:
-- Programming Language
+- Reading Notes
 tags:
 - Reading Notes
 ---
