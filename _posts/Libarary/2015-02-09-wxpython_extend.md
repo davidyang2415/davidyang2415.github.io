@@ -2,9 +2,10 @@
 layout: post
 title: wxpython extend
 categories:
-- Programming Language
+- Libarary
 tags:
-- Python&Lib
+- python
+- wxpython
 ---
 
 # wxPython之扩展特性

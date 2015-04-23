@@ -2,7 +2,7 @@
 layout: post
 title: 设计模式之基础
 categories:
-- Programming Language
+- Design Pattern
 tags:
 - design pattern
 ---

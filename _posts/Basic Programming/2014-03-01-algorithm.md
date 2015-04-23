@@ -2,9 +2,10 @@
 layout: post
 title: 算法
 categories:
-- Programming Language
+- Basic Programming
 tags:
 - basic programming
+- algorithm
 ---
 
 ## 递归

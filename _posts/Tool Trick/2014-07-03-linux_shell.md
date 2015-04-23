@@ -2,7 +2,7 @@
 layout: post
 title: linux shell
 categories:
-- Programming Language
+- Linux
 tags:
 - linux
 ---

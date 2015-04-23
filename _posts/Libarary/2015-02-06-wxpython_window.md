@@ -2,9 +2,10 @@
 layout: post
 title: wxpython window
 categories:
-- Programming Language
+- Libarary
 tags:
-- Python&Lib
+- python
+- wxpython
 ---
 
 # wxPython之窗口

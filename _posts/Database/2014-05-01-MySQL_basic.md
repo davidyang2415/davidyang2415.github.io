@@ -2,9 +2,10 @@
 layout: post
 title: MySQL基础语法
 categories:
-- Programming Language
+- Database
 tags:
 - Database
+- MySQL
 ---
 
 # MySQL基础语法

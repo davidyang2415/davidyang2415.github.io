@@ -2,7 +2,7 @@
 layout: post
 title: 数据结构
 categories:
-- Programming Language
+- Basic Programming
 tags:
 - basic programming
 ---

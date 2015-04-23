@@ -2,7 +2,7 @@
 layout: post
 title: 设计模式之Reactor与Proactor
 categories:
-- Programming Language
+- Design Pattern
 tags:
 - design pattern
 ---

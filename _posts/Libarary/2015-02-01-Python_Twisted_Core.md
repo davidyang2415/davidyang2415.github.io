@@ -2,9 +2,10 @@
 layout: post
 title: twisted基础
 categories:
-- Programming Language
+- Libarary
 tags:
-- Python&Lib
+- python
+- twisted
 ---
 
 #Twisted基础

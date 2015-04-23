@@ -2,9 +2,10 @@
 layout: post
 title: MySQL存储过程
 categories:
-- Programming Language
+- Database
 tags:
 - Database
+- MySQL
 ---
 
 # MySQL存储过程

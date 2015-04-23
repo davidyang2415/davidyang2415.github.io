@@ -2,9 +2,10 @@
 layout: post
 title: google-glog
 categories:
-- Programming Language
+- Libaray
 tags:
-- C++&Lib
+- C++
+- google
 ---
 
 # google-glog 开源库分析

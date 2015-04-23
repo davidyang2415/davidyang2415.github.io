@@ -2,9 +2,10 @@
 layout: post
 title: wxpython grid
 categories:
-- Programming Language
+- Libarary
 tags:
-- Python&Lib
+- python
+- wxpython
 ---
 
 # wxPython之布局管理器

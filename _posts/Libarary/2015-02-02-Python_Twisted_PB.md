@@ -2,9 +2,10 @@
 layout: post
 title: twisted pb
 categories:
-- Programming Language
+- Libarary
 tags:
-- Python&Lib
+- python
+- twisted
 ---
 
 #Twisted Perspective Broker

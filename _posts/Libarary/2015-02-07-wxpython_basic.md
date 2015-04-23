@@ -2,9 +2,10 @@
 layout: post
 title: wxpython basic
 categories:
-- Programming Language
+- Libarary
 tags:
-- Python&Lib
+- python
+- wxpython
 ---
 
 # wxPython之基本概念

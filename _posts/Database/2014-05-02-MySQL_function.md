@@ -2,9 +2,10 @@
 layout: post
 title: MySQL函数
 categories:
-- Programming Language
+- Database
 tags:
 - Database
+- MySQL
 ---
 
 # MySQL函数

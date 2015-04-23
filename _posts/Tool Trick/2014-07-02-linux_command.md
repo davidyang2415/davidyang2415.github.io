@@ -2,7 +2,7 @@
 layout: post
 title: linux命令
 categories:
-- Programming Language
+- Linux
 tags:
 - linux
 ---

@@ -2,9 +2,10 @@
 layout: post
 title: twisted web
 categories:
-- Programming Language
+- Libarary
 tags:
-- Python&Lib
+- python
+- twisted
 ---
 
 #Twisted Web 编程
