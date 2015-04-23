@@ -2,8 +2,9 @@
 layout: post
 title: 设计模式之基础
 categories:
-- Design Pattern
+- Basic Programming
 tags:
+- basic programming
 - design pattern
 ---
 
