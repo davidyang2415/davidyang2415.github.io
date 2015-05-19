@@ -1,0 +1,197 @@
+---
+layout: post
+title: Python语法之标准库
+categories:
+- Programming Language
+tags:
+- Python
+---
+
+## 内置函数：
+- 输入与输出：
+	- input(),原语输入-字符串输入时需要加引号，输入值类型与输入相关
+	- raw_input(),所有输入内容都作为字符串，所以字符串输入时不需要加引号
+	- print,末尾不是逗号结束时输出后换行，是逗号结束则不换行
+		- 输出内容间以逗号分隔，逗号输出为空格
+- 断言：assert condition,msg_if_false
+- 命令：
+	- del命令：解除标识符和对象间的引用关系，对象有垃圾回收器处理
+	- exec命令：执行一个字符串语句，如exec "print 'hello,world!'"
+	- eval函数：类似exec的内建函数，返回执行字符串语句后的结果，如value=eval("1+2+3")
+- 类型相关函数：
+	- type(arg) ->type: type object of arg
+	- 类型转换：
+		- bool(expr) ->True|False
+		- int(expr[,base=10]) ->int
+		- long(expr[,base=10]) ->long
+		- float(expr) ->float
+		- complex(x[,y]) ->complex
+		- chr(code) ->char
+		- unichr(num)
+		- ord(char) ->code
+		- hex(num) ->str ,将数字转换为十六进制字符串
+		- 转换为字符串：
+			- str(expr) 转换为合理形式，事实上str和int/long是一种类型
+			- repr(expr)，`expr` 将expr转换为合法的Python表达式
+- 迭代工具：
+ 	- range(number)，一次生成[0-number-1]元素，推荐使用xrange(number)会逐个生成[0-number-1]个元素
+ 	- zip(seq1,seq2)，将两个序列压缩到一个列表中，列表元素是对应位置seq1和seq2的元素组成的元组，列表元素个数为min(len(seq1),len(seq2))
+ 	- enumerate(seq)，生成索引和值对
+ 	- reversed,sorted返回翻转或排序后的序列的副本，与列表的reverse和sort不同
+
+## 文件
+- open(),file() 创建文件对象
+	- open(filename[,mode[,buffering]] 返回文件对象
+	- 文件开打方法：r,w,a,r+,w+,a+,rb,wb,ap,rb+,wb+,ab+
+	－ 0表示无缓冲，1表示有缓冲，大于1表示缓冲区大小，-1或其他负数表示使用默认缓冲区
+- 文件对象方法：
+	- read([len]),readline([len]),readlines()
+	- write(str),writeline(),writelines(seq)
+	- seek(),tell()
+	- close()
+- 迭代文件
+	- 可迭代read(),readline(),如for line in f.readline():
+	- 可直接迭代文件对象,如for f in open(filename):
+
+## 标准模块：
+### 文件相关
+- os：
+	- 属性
+		- os.name 操作系统名称：windows是nt,linux/unix是posix
+		- os.sep 操作系统的路径分隔符
+		- os.pathsep 文件路径分隔符
+		- os.linesep 平台的行终止符,如windows的\r\n,linux的\n,mac的\r
+		- os.curdir 当前目录，通常是'.'
+		- os.pardir 当前工作目录的父目录，通常是'..'
+	- 方法
+		- os.system(cmd) 运行shell命令
+		- os.getcwd() 获取当前工作目录
+		- os.chdir(dirname) 更改工作目录到dirname
+		- os.getenv(),os.putenv() 读取和设置环境变量
+		- os.listdir(path) 返回指定目录下的所有文件和目录名
+		- os.walk(path) 返回三元tuple(path,dirs,files)迭代--path目录字符串,
+			- dirs是path下的子目录list,files是path下的文件list，用walk会遍历所有目录与os.listdir(path)不同
+		- os,mkdir(path) 创建目录
+		- os.makedirs(path) 创建目录--如果中间目录不存在则创建
+		- os.remove(path) 删除文件
+		- os.rmdir(path) 删除空目录，遇到非空目录会抛出错误
+		- os.removedirs(path) 从底层开始删除空目录
+		- os.rename(old,new) 从命名文件
+- os.path模块
+	- os.path.split(path) 分割路径为目录名和文件名--不会判断是否是文件路径还是目录路径
+	- os.path.splitext(filename) 分割文件名和扩展名
+	- os.path.join(path,name) 拼接目录和文件名
+	- os.path.basename(path) 返回文件名
+	- os.path.dirname(path) 返回文件路径
+	- os.path.isfile(path),os.path.isdir(path) 判断path是否是文件还是目录
+	- os.path.existe(path) 判断path目录或文件是否存在
+	- os.path.getsize(name) 获得文件大小，目录大小为0L
+	- os.path.getatime(path) 最近访问时间
+	- os.path.getctime(path) 创建时间
+	- os.path.getmtime(path) 最近修改时间
+	- os.path.abspath(name) 获得绝对路径
+	- os.path.normpath(path) 规范path字符串形式
+- shutil，对目录的高级操作
+	- shutil.copy(src,dst) 复制单个文件,dst可以是目录
+	- shutil.copy(src,dst) 复制文件，dst必须是文件
+	- shutil.copytree(source,target) 复制整个目录树
+	- shutil.rmtree(path) 删除整个目录树
+	- shutil.move(src,dst) 移动文件或目录，也可做改名使用
+### 字符串相关
+- 正则表达式语法
+	- 正则表达式语句
+		- . 表示任意字符 -- 默认不包含换行符
+		- ^ 表示字符串开头
+		- $ 表示字符串结尾
+		- *,+,? 分别表示后面可跟0个或多个、1个或多个、0个或多个字符
+		- \*?,+?,?? 非贪婪匹配的\*,+,?
+		- {m} 对前一个字符重复m次
+		- {m,n} 对前一个字符重复m到n次
+		- {m,n}? 非贪婪匹配{m,n}
+		- \ 对特殊字符进行转义，或指定特殊序列
+		- [] 表示一个字符集,如[abc],[a-zA-Z0-9],[^6]--除6之外任意字符
+		- | 或者，只匹配其中一个表达式
+		- (...) 匹配括号中的任意正则表达式
+		- (?#...) 注释，匹配括号内的内容
+		- (?=...) 表达式之前的字符串
+		- (?!...) 后面不跟表达式'...'的字符串)
+		- (?<=...) 跟在表达式'...'后面的字符串符合括号之后的正则表达式
+		- (?<!...) 括号之后的正则表达式不跟在'...'的后面
+	- 正则表达式特殊序列
+		- \A 只在字符串开头进行匹配
+		- \b 匹配位于开头或结尾的空字符串
+		- \B 匹配不位于开头或结尾的空字符串
+		- \d 匹配任意十进制数，相当于[0-9]
+		- \D 匹配任意非数字字符，相当于[^0-9]
+		- \s 匹配任意空白字符，相当于[\t\n\t\f\v]
+		- \S 匹配任意非空白字符，相当于[^\t\n\r\f\v]
+		- \w 匹配任意数字和字母、下划线，相当于[a-zA-Z0-9_]
+		- \W 匹配任意非数字和字母的字符，相当于[^a-zA-Z0-9_]
+		- \Z 只在字符串结尾进行匹配
+- re
+	- 通用特性
+		- 正则表达式通过re.compile()编译成RegexObject实例
+		- RegexObject实例和包含对应以下列举的函数的方法，只不过不再需要pattern参数
+		- re定义的flag包括
+			- re.l 忽略大小写
+			- re.L 表示特殊字符集\w,\W,\b,\B,\s,\S依赖于当前环境
+			- re.M 多行模式
+			- re.S 符号'.'包含换行符在内
+			- re.U 特殊字符集\w,\W,\b,\B,\d,\D,\s,\S依赖于Unicode字符属性数据库
+			- re.X 为增加可读性，忽略空格和'#'后面的注释
+	- 方法
+		- re.compile(pattern[,flags]) 把正则表达式的模式和标识转化成正则表达式对象，供 match() 和 search() 这两个函数使用。
+		- re.search(pattern,string[,flags] 在字符串中查找匹配正则表达式模式的位置，返回 MatchObject 的实例，
+			- 如果没有找到匹配的位置，则返回 None。
+		- re.match(pattern,string[,flags] match() 函数只在字符串的开始位置尝试匹配正则表达式，也就是只报告从位置 0 开始的匹配情况，
+			－ 而 search() 函数是扫描整个字符串来查找匹配。
+		- re.split(pattern,string[,maxsplit=0,flags=0]) 将将字符串匹配正则表达式的部分割开并返回一个列表。
+		- re.findall(pattern,string[,flags]) 在字符串中找到正则表达式所匹配的所有子串，并组成一个列表返回。
+		- re.finditer(pattern,string[,flags]) 在字符串中找到正则表达式所匹配的所有子串，并组成一个迭代器返回。
+		- re.sub(pattern,repl,string[,count,flags]) 在字符串 string 中找到匹配正则表达式 pattern 的所有子串，
+			- 用另一个字符串 repl 进行替换。如果没有找到匹配 pattern 的串，则返回未被修改的 string。
+			- Repl 既可以是字符串也可以是一个函数。
+		- re.sub(pattern,repl,string[,count,flags]) 该函数的功能和 sub() 相同，但它还返回新的字符串以及替换的次数。
+### 时间相关
+- time:
+	- time.sleep(seconds) 线程睡眠
+	- time.clock() 第一次返回调用时的时间戳，第二次调用返回距离第一次调用的时间间隔
+	- time.time() 获取当前时间戳--整数值
+	- time.localtime([timstramp]) 将一个时间戳转换成一个当前时区的struct_time形式，无参数时为当前时间
+	- time.ctime([timestramp])->string 获取时间的字符串形式，无参数时为当前时间
+	- time.asctime([tuple])->string 将一个struct_time(默认当前时间)转换为字符串
+	- time.gmtime([seconds]) 将一个时间戳转换成一个UTC时区的struct_time--无参数时为当前时间
+	- time.mktime(tuple)->float 将一个struct_time转换为时间戳
+	- time.strptime(string,format)->struct_time 将时间字符串按指定格式转换成一个struct_time数据
+	- time.strftime(format,time_str) 格式化输出时间
+		- %y,%Y 年份，%m 月份，%d 月内的天
+		- %H(24小时制),%I(12小时制) 小时，%M 分钟，%S 秒
+		- %a(简化),%A 本地星期名称，%b,%B 本地的月份名称
+		- %c 本地相应的日期表示和时间表示，%x 日期部分，%X 时间部分
+		- %j 当前时间是年内的第几天
+		- %p 本地A.M.或P.M.的等价符
+		- %w 星期几(0-6)，从星期天开始计算
+		- %U(星期天开始)%W(星期一开始) 当前时间是年内的第几周
+		- %z,%Z 当前时区的名称
+- datetime
+	- 常量属性：
+		- datetime.MINYEAR datetime所能表示的最小年份，值是1
+		- datetime.MAXYEAR datetime所能表示的最大年份，值是9999
+	- 属性：
+		- datetime.date 表示日期的类
+		- datetime.time 表示时间的类
+		- datetime.datetime 表示日期时间的类
+		- datetime.timedelta 表示时间间隔的类
+		- datetime.tzinfo 与时区相关的信息
+### 数学
+- random:
+	- random.random() [0,1.0)范围的随机数
+	- random.uniform(a,b)  生成区间内(包含a,b)的随机数，a与b的大小随意
+	- random.randint(min,max) 生成[min,max]范围内的随机整数
+	- random.randrange([start,]stop[,step]) 在根据参数生成的序列中随机获取一个随机数
+	- random.choice(sequence) 获取序列中的随机一个元素
+	- random.shuffle(x[,random]) 将一个列表x的元素顺序打乱
+	- random.sample(sequence,len) 从指定序列中随机获取指定长度个数元素组成的序列片段
+- re
+- struct
+- base64/hashlib/md5/sha
