@@ -1,6 +1,6 @@
 ---
 layout: post
-title: wxpython widget
+title: wxpython控件
 categories:
 - Libarary
 tags:
@@ -8,8 +8,6 @@ tags:
 - wxpython
 ---
 
-# wxPython之控件
-------------
 ## 基础窗口控件
 ### 静态文本StaticText
 - wx.StaticText(parent,id,label,pos=wx.DefaultPosition,size=wx.DefaultSize,style=0,name='staticText'

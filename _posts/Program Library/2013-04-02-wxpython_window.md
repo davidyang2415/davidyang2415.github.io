@@ -1,6 +1,6 @@
 ---
 layout: post
-title: wxpython window
+title: wxpython窗口
 categories:
 - Libarary
 tags:
@@ -8,8 +8,6 @@ tags:
 - wxpython
 ---
 
-# wxPython之窗口
-------------
 ## 顶级窗口
 - 窗口框架
 	- 框架wx.Frame

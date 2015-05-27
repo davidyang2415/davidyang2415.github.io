@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python语法之扩展特性
+title: Python语法之高级特性
 categories:
 - Programming Language
 tags:

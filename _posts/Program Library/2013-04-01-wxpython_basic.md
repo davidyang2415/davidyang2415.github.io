@@ -1,6 +1,6 @@
 ---
 layout: post
-title: wxpython basic
+title: wxpython基础概念
 categories:
 - Libarary
 tags:
@@ -8,8 +8,6 @@ tags:
 - wxpython
 ---
 
-# wxPython之基本概念
----
 ## 创建wxPython程序
 ### 创建程序主体的步骤：
 - 导入必须的wxPython包

@@ -13,16 +13,12 @@ tags:
 	- 标识符组成：[a-zA-Z_][a-zA-Z0-9_]*
 	- 特殊标识符：
 		- _xxx 不会被import *引入命名空间，可用于内部实现细节
-		- __xxx 类私有成员，内部定义成_className__xxx
-		- __xxx__ Python保留
+		- \_\_xxx 类私有成员，内部定义成_className__xxx
+		- \_\_xxx__ Python保留
 	- 关键字(keyword)
-		- try except finally raise
-		- if elif else for while continue break pass
-		- def lambda class return yield
-		- print assert exec del
-		- from import global
-		- and or not in is as
-		- None True False
+		- [try except finally raise],[if elif else for while continue break pass]
+		- [def lambda class return yield],[print assert exec del]
+		- [from import global],[and or not in is as],[None True False]
 - 常量：python中不支持常量定义，可以将常量定义为全大写形式
 - 字面值
 	- 字面值是指源代码中直接出现的以人类可读形式表示的固定值

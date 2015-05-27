@@ -1,6 +1,6 @@
 ---
 layout: post
-title: wxpython grid
+title: wxpython布局管理器
 categories:
 - Libarary
 tags:
@@ -8,8 +8,6 @@ tags:
 - wxpython
 ---
 
-# wxPython之布局管理器
----
 ## 容器
 - wx.Panel，其他空间的容器
 
