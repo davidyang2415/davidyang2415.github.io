@@ -1,15 +1,13 @@
 ---
 layout: post
-title: linux shell
+title: linux脚本：shell
 categories:
 - Tool Trick
 tags:
 - linux
 ---
 
-#shell脚本基础
----
-
+## shell基础
 ###输出
 > echo
 
