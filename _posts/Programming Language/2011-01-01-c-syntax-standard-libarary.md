@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C语言标准库
+title: C语言标准库概述
 categories:
 - Programming Language
 tags:
@@ -8,7 +8,8 @@ tags:
 ---
 
 ## I/O系统
-- 头文件：#include <stdio.h>
+- 头文件：
+	- #include <stdio.h>
 - printf和scanf函数族
 	- printf(),sprintf(),fprintf()
 	- scanf(),sscanf(),fscanf()
@@ -32,15 +33,15 @@ tags:
 		- setvbuf()
 		- int feof(FILE*)
 		- clearerr(),ferror(),perror()
-- 操作文件
-	- remove()
-	- rename()
-	- tmpfile(),tmpnam()
-- 二进制文件操作
-	- 对于二进制文件，读写指针的位置有SEEK_SET,SEEK_CUR,SEEK_END来表示开始、当前和结尾的位置
-	- 常用操作：
-		- fgetpos(),fsetpos()
-		- fseek(),ftell(),rewind()
+	- 操作文件
+		- remove()
+		- rename()
+		- tmpfile(),tmpnam()
+	- 二进制文件操作
+		- 读写指针的位置有SEEK_SET,SEEK_CUR,SEEK_END来表示开始、当前和结尾的位置
+		- 常用操作：
+			- fgetpos(),fsetpos()
+			- fseek(),ftell(),rewind()
 
 ## 字符与字符串
 - 头文件：
@@ -73,7 +74,8 @@ tags:
 		- strcoll(),strerror(),strxfrm()
 
 ## 日期与时间
-- 头文件：#include <time.h>
+- 头文件：
+	- #include <time.h>
 - 常用时间结构 struct tm
 	- gmtime() GM:格林威治时间
 	- localtime() 本地时间
@@ -87,15 +89,15 @@ tags:
 - difftime() 时间间隔
 
 ## 数学
-- 头文件：#include <stdlib.h>
+- #include <stdlib.h>
 	- abs(),fabs(),labs()
-- 头文件：#include <math>
-- ceil(),floor()
-- div(),exp(),fmod(),frexp(),ldexp(),ldiv(),log(),log10(),modf(),pow(),sqrt()
-- sin(),sinh(),cos(),acos(),asin(),atan(),atan2(),cosh(),tan(),tanh()
+- #include <math.h>
+	- ceil(),floor()
+	- div(),exp(),fmod(),frexp(),ldexp(),ldiv(),log(),log10(),modf(),pow(),sqrt()
+	- sin(),sinh(),cos(),acos(),asin(),atan(),atan2(),cosh(),tan(),tanh()
 
 ## 内存
-- 头文件：#include <stdlib.h>
+- #include <stdlib.h>
 	- calloc(),malloc(),realloc()
 	- free()
 
