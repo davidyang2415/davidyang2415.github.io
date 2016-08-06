@@ -1,5 +1,6 @@
+gems: [jekyll-paginate]
 markdown: rdiscount
 permalink: /:year/:month/:title/
 author: yangdw
-pygments: true
-paginate: 24
+higlighter: pygments
+paginate: 25
