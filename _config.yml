@@ -4,3 +4,5 @@ permalink: /:year/:month/:title/
 author: yangdw
 higlighter: pygments
 paginate: 25
+
+theme: jekyll-theme-leap-day
